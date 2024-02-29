@@ -67,7 +67,8 @@ const playGame= (userChoice) =>{
   }
 };
 
-
+const audio=new Audio();
+audio.src="./sound.mp3";
 
 
 
@@ -75,7 +76,10 @@ choices.forEach((choice)=>{
    
     choice.addEventListener("click", ()=>{
         const userChoice = choice.getAttribute("id");
+       
    
     playGame(userChoice);
-    })
-})
+    audio.play(audio);
+    });
+});
+   
